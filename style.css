@@ -1,0 +1,1656 @@
+/* ;) لو انت بتشوف الكود خد بوسة 
+
+- انس */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Outfit:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Halant:wght@300;400;500;600;700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+/* ------------------- */
+
+/* Universal */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+/* HOME PAGE */
+
+/* Home page Layout */
+.container {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner banner banner"
+        "sec1 sec1 sec1"
+        "sec2 sec2 sec2"
+        "sec3 sec3 sec3"
+        "sec4 sec4 sec4"
+        "sec5 sec5 sec5"
+        "sec6 sec6 sec6"
+        "people people people"
+        "foot foot foot";
+}
+
+/* End  Home Page Layout */
+
+/* Start Nav Nar */
+header {
+    grid-area: header;
+    height: 70px;
+    z-index: 0;
+    color: white;
+}
+header input{
+    text-align: center;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+}
+
+
+header h1 {
+    font-family: "Cinzel", serif;
+    font-size: 40px;
+    margin-left: 20px;
+    animation-name: gt;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes gt {
+    0% {
+        color: white;
+    }
+
+    25% {
+        color: rgb(7, 176, 243);
+    }
+
+    50% {
+        color: rgb(236, 120, 37);
+    }
+
+    75% {
+        color: rgb(247, 215, 9);
+    }
+
+    100% {
+        color: rgb(255, 255, 255);
+    }
+}
+
+header ul {
+    display: flex;
+    list-style: none;
+    font-size: 18px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+}
+
+.items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.menu {
+    display: none;
+}
+.menu:hover{
+    color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+
+
+.items li a {
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+}
+
+.dbd {
+    padding: 15px;
+}
+
+.dbd:hover {
+    color: black;
+    transition-duration: 0.4s;
+    background-color: rgb(236, 120, 37);
+}
+
+.items li a:hover {
+    color: black;
+    transition-duration: 0.4s;
+    background-color: rgb(236, 120, 37);
+}
+
+header ul li {
+    padding: 15px;
+}
+
+/* Start Dropdowns */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dropdown-content {
+    z-index: 0;
+    display: none;
+    position: absolute;
+    min-width: 250%;
+    background-color: rgba(145, 143, 143, 0.418);
+    border-radius: 4px;
+    left: -66%;
+    top: 100%;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    transition-duration: 0.4s;
+}
+
+/* Start Dropdowns Lists */
+.dropdown ul {
+    display: block;
+    text-align: center;
+}
+
+.dropdown a {
+    color: black;
+}
+
+.navdown {
+    position: relative;
+    display: none;
+    cursor: pointer;
+}
+.navdown form{
+    margin-left: 25px
+}
+.navdown i{
+    padding-left: 10px;
+}
+
+.navdown ul {
+    display: block;
+    text-align: center;
+}
+
+.navdown li {
+    margin: 10px 0px;
+}
+
+/* End Dropdowns Lists */
+
+.navdown-content {
+
+    z-index: 0;
+    display: none;
+    position: absolute;
+    text-align: center;
+    border-radius: 8px;
+    background-color: rgba(0, 0, 0, 0.84);
+    color: rgb(255, 255, 255);
+    border: 4px solid rgb(255, 132, 0);
+    height: fit-content;
+}
+
+.navdown:hover .navdown-content {
+    display: block;
+}
+
+.navdown li a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 10px;
+    font-size: 20px;
+}
+
+.navdown li a:hover {
+    color: rgb(0, 0, 0);
+    background-color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+.navdown input {
+    text-align: center;
+    padding: 10px;
+    margin-top: 15px;
+    border-radius: 20px;
+    border: 3px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.navdown input:focus {
+    border: 4px solid rgb(236, 120, 37);
+    ;
+}
+
+/* End Dropdowns*/
+
+
+
+#field {
+    border-radius: 30px;
+    padding: 15px;
+    margin-right: 10px;
+}
+
+
+
+/* End Nav Bar */
+
+
+/* Start Banner  */
+
+.banner {
+    background-image: url(photos2/og6.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: banner;
+    background-size: cover;
+    margin-top: -70px;
+    height: 100vh;
+}
+
+.great {
+    display: flex;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 15% 0%;
+    font-size: 40px;
+
+}
+
+
+.great h1 {
+    font-family: "Halant", serif;
+}
+
+.great button {
+    border-radius: 40px;
+    background-color: transparent;
+    color: white;
+    outline: 3px solid rgb(255, 255, 255);
+    padding: 20px;
+    width: 140px;
+    font-size: 18px;
+    border: none;
+}
+
+.great button:hover {
+    background-color: rgb(236, 120, 37);
+    color: black;
+    outline: none;
+    transition-duration: 0.4s;
+}
+
+.scroll{
+    text-decoration: none;
+    color: white;
+    border-radius: 50%;
+    padding: 8px 18px;
+    font-size: 26px;
+    outline: white 3px solid;
+    background-color: transparent;
+    margin-top: 20px;
+}
+
+.scroll:hover{
+    background-color: rgb(236, 120, 37);
+    color: black;
+    outline: none;
+    transition-duration: 0.4s;
+}
+
+
+/* End Banner  */
+
+
+/* Start Section One */
+
+.sec1 {
+    grid-area: sec1;
+    height: fit-content;
+    padding-bottom: 85px;
+}
+
+.about h2,
+p,
+button {
+    margin: 15px 0px;
+}
+
+
+.about button {
+    text-align: center;
+    width: 150px;
+    padding: 15px;
+    border-radius: 5px
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.about img {
+    flex-wrap: wrap;
+    border-right: 4px solid rgb(7, 176, 243);
+    border-radius: 8px;
+    width: 500px;
+    height: 340px
+}
+
+
+.exp1 h2 {
+    font-family: "Halant", serif;
+}
+
+.exp1 p {
+    color: grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+}
+
+.exp1 button {
+    border: none;
+    background-color: rgb(7, 176, 243);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+.exp1 button:hover {
+    background-color: rgb(236, 120, 37);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+/* End Section One */
+
+/* Start section Two */
+
+.sec2 {
+    grid-area: sec2;
+    background-image: url(photos2/og3.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    height: fit-content;
+    padding: 10% 0%;
+}
+
+.pro {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.pro img {
+    width: 70px;
+    height: 70px;
+}
+
+.shape {
+    padding: 0px 50px;
+    text-align: center;
+    color: white;
+}
+
+.shape h3 {
+    font-family: "Halant", serif;
+}
+
+.shape p {
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+.shape a {
+    text-decoration: none;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+}
+
+.shape a:hover {
+    color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+/* End Section Two */
+
+/* Start Section Three */
+
+.sec3 {
+    grid-area: sec3;
+    height: fit-content;
+    padding-bottom: 8%;
+}
+
+.parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.parent img {
+    border-radius: 10px;
+}
+
+.lead {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.exp2 {
+    font-size: 20px;
+}
+
+.exp2 h1 {
+    text-align: center;
+    font-family: "Halant", serif;
+}
+
+
+
+.exp2 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    color: grey;
+}
+
+.child {
+    background-color: rgb(236, 120, 37);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    font-family: "Open Sans", sans-serif;
+    border-radius: 10px;
+    height: 170px;
+    width: 520px;
+    font-size: 20px;
+}
+
+.child p {
+    text-align: center;
+}
+
+.child h2 {
+    text-align: center;
+}
+
+/* End Section Three */
+
+/* Start Section four */
+
+.sec4 {
+    grid-area: sec4;
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 8%;
+}
+
+.sec4 h1 {
+    font-family: "Halant", serif;
+    font-size: 35px;
+}
+
+.sec4 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: rgb(119, 118, 118);
+}
+
+.art {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+.card {
+    border-radius: 10px;
+    background-color: rgb(237, 237, 237);
+    margin-top: 40px;
+}
+
+.card:hover {
+    box-shadow: 8px 8px 20px rgb(115, 115, 115);
+    transition-duration: 0.4s;
+    color: rgb(7, 176, 243);
+    transform: scale(1.1);
+}
+
+.card img {
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+}
+
+.card h2 {
+    font-family: "Halant", serif;
+}
+
+.card button {
+    border: none;
+    background-color: rgb(7, 176, 243);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.card button:hover {
+    background-color: rgb(236, 120, 37);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+/* End Section four */
+
+/* Start Section Five */
+
+.sec5 {
+    grid-area: sec5;
+    text-align: center;
+    height: fit-content;
+    padding-bottom: 5%;
+}
+
+.sec5 h1 {
+    font-family: "Halant", serif;
+    font-size: 35px;
+}
+
+.sec5 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    font-size: 18px;
+    color: rgb(119, 118, 118);
+}
+
+.pet {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    font-family: "Halant", serif;
+}
+
+.pet h2 {
+    cursor: pointer;
+}
+
+.pet img {
+    border-radius: 10px;
+}
+
+/* End Section Five */
+
+/* Start Section Six */
+
+.sec6 {
+    background-image: url(photos2/pexels-sliceisop-1894350.jpg);
+    background-size: cover;
+    background-position: center;
+    grid-area: sec6;
+    height: fit-content;
+    padding-bottom: 15%;
+}
+
+.pics {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 12%;
+}
+
+.exp3 {
+    color: white;
+}
+
+.exp3 h1 {
+    font-size: 30px;
+    font-family: "Halant", serif;
+    text-align: start;
+}
+
+.exp3 p {
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    text-align: start;
+}
+
+.exp3 button {
+    border: none;
+    background-color: rgb(7, 176, 243);
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 15px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.exp3 button:hover {
+    background-color: rgb(236, 120, 37);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.parent2 {
+    height: 400px;
+    display: grid;
+    column-gap: 8px;
+    row-gap: 15px;
+    width: 600px;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+.child2 {
+    background-color: white;
+    border-radius: 8px;
+    font-size: 15px;
+    font-family: "Halant", serif;
+    padding: 20px;
+    text-align: center;
+}
+
+.child2 h1 {
+    cursor: pointer;
+}
+
+.child2:hover {
+    color: rgb(7, 176, 243);
+    transition-duration: 0.4s;
+}
+
+.child2 img {
+    border-radius: 50%;
+    /* padding: 0px 25px;
+    padding-top: 20px; */
+}
+
+/* End Section Six */
+
+/* Start Creators Section */
+.people {
+    grid-area: people;
+    height: fit-content;
+    padding: 80px 0px;
+}
+
+.here {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+
+.biggy {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.create {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 40px;
+    background-color: rgb(237, 237, 237);
+    height: 200px;
+    margin: 15px 15px;
+    border-radius: 5px;
+    opacity: 0.6;
+}
+
+.create:hover {
+    opacity: 1;
+}
+
+.create p {
+    font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(63, 63, 63);
+}
+
+.test {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    color: grey;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 100;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+
+.test h4 {
+    margin-left: 20px;
+}
+
+.test h4::first-line {
+    font-size: 20px;
+    font-family: "Halant", serif;
+    color: black;
+}
+
+/* End Creators Section */
+
+/* Start Footer */
+
+footer {
+    background-color: rgb(0, 0, 0);
+    grid-area: foot;
+    color: white;
+}
+
+.FootStuf {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.Emt {
+    margin-top: 10%;
+    text-align: center;
+}
+
+.Emt h1 {
+    font-family: "Cinzel", serif;
+}
+
+.Emt input {
+    padding: 20px;
+    width: 400px;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+#click {
+    padding: 15px;
+    width: 200px;
+    margin-top: 20px;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    background-color: rgb(7, 176, 243);
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+    cursor: pointer;
+}
+#click:hover{
+    background-color: rgb(236, 120, 37);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+.FootStuf p {
+    margin-top: 200px;
+    font-family: "Open Sans", sans-serif;
+    color: grey;
+}
+
+/* End footer */
+
+
+/* --------------------- */
+
+/* ABOUT PAGE !! */
+
+/* About Page Layout */
+.container2 {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner2 banner2 banner2"
+        "sec8 sec8 sec8"
+        "sec9 sec9 sec9"
+        "sec10 sec10 sec10"
+        "sec11 sec11 sec11"
+        "people people people"
+        "foot foot foot";
+}
+
+/* End About Page Layout */
+
+/* Start Secondary Banner */
+
+.banner2 {
+    background-image: url(photos/abstract-art-background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    grid-area: banner2;
+    margin-top: -70px;
+    background-size: cover;
+}
+
+/* End Secondary Banner */
+
+/* This class is useed to define which Page You are in */
+/* ;) بالعربي كدا الكلاس دا معمول عشان يحدد انت في انهي صفحة  */
+.pg {
+    text-align: center;
+    color: white;
+    font-family: "Halant", serif;
+    font-weight: bold;
+    font-size: 30px;
+    padding: 10% 0;
+}
+
+/* ----------------------------- */
+
+/* ABOUT PAGE */
+
+/* Start Section Eight */
+
+.sec8 {
+    grid-area: sec8;
+    height: fit-content;
+    padding-bottom: 80px;
+}
+
+/* End Section Eight */
+
+/* Start Section Nine */
+
+.sec9 {
+    grid-area: sec9;
+    background-image: linear-gradient(rgb(77, 115, 220), rgb(7, 176, 243));
+    text-align: center;
+    font-family: "Halant", serif;
+    color: white;
+    height: fit-content;
+    padding: 80px 0px;
+}
+
+.sec9 h1 {
+    font-size: 30px;
+}
+
+.sec9 p {
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+.social {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin-top: 8%;
+}
+
+.social i {
+    font-size: 45px;
+}
+
+.social a {
+    text-decoration: none;
+    color: white;
+}
+
+.social a:hover {
+    color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+.social h2 {
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+/* End Section Nine */
+
+/* Start Section Ten */
+
+.sec10 {
+    grid-area: sec10;
+    height: fit-content;
+    padding-bottom: 50px;
+}
+
+
+.sec10 video {
+    width: 500px;
+    height: 400px;
+}
+
+.cool {
+    margin-top: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* End Section 10 */
+
+/* Start Section Eleven */
+
+.sec11 {
+    grid-area: sec11;
+    height: fit-content;
+    background-image: url(photos2/og4.jpg);
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    font-family: "Halant", serif;
+    color: white;
+    font-size: 22px;
+    padding: 10% 0%;
+}
+
+.sec11 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.sec11 button {
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+#bt2 {
+    background-color: rgb(7, 176, 243);
+    color: white;
+    margin-left: 10px;
+}
+
+.sec11 button:hover {
+    color: white;
+    background-color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+#bt2:hover {
+    background-color: rgb(236, 120, 37);
+}
+
+/* End Section Eleven */
+
+/* --------------- */
+
+/* SERVICES PAGE */
+
+/* Services Page Layout */
+.container3 {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner2 banner2 banner2"
+        "sec12 sec12 sec12"
+        "foot foot foot";
+}
+
+/* End Services Page Layout */
+
+/* Start Section Twelve */
+
+.sec12 {
+    grid-area: sec12;
+    text-align: center;
+    font-size: 20px;
+    height: fit-content;
+    margin: 80px 0px;
+}
+
+.sec12 h1 {
+    font-family: "Halant", serif;
+}
+
+.sec12 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+}
+
+.parent3 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.serv {
+    background-color: rgb(237, 237, 237);
+    margin: 20px 20px;
+    padding: 20px;
+    border-radius: 15px;
+    font-size: 17px;
+}
+
+.serv img {
+    border-radius: 50%;
+}
+
+.serv button {
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.serv:hover {
+    color: white;
+    background-image: linear-gradient(rgb(29, 99, 221), rgb(9, 203, 237));
+    transition-duration: 0.4s;
+}
+
+.serv button:hover {
+    background-color: white;
+    color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+
+/* End Section Twelve */
+
+/* --------------- */
+
+/* CONTACT PAGE */
+
+/* Contact Page Layout */
+.container4 {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner2 banner2 banner2"
+        "sec13 sec13 sec13"
+        "foot foot foot";
+}
+
+/* End Contact Page Layout */
+
+/* Start Section Thirteen */
+
+.sec13 {
+    grid-area: sec13;
+    text-align: center;
+    font-family: "Halant", serif;
+    height: fit-content;
+    padding: 60px 0px;
+}
+
+.sec13 h1 {
+    font-size: 30px;
+}
+
+.sec13 p {
+    text-align: center;
+    color: grey;
+    font-family: "Open Sans", sans-serif;
+    font-size: 20px;
+}
+
+
+
+.sec13 form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+    font-size: 18px;
+}
+
+.info input {
+    display: block;
+    padding: 10px;
+    width: 400px;
+    background-color: aliceblue;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 3px;
+    margin: 8px 50px;
+}
+
+.info input:focus {
+    outline: 3px solid rgb(3, 180, 211);
+    transition-duration: 0.1s;
+}
+
+.area {
+    margin-top: 108px;
+}
+
+#place {
+    height: 200px;
+    width: 400px;
+    background-color: aliceblue;
+    border: 1px solid rgb(217, 217, 217);
+    border-radius: 3px;
+}
+
+#place::placeholder {
+    font-size: 20px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
+}
+
+#place:focus {
+    outline: 3px solid rgb(3, 180, 211);
+    transition-duration: 0.1s;
+}
+
+.area input {
+    display: block;
+    padding: 20px;
+    margin-left: 72%;
+    margin-top: 20px;
+    background-color: rgb(7, 176, 243);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.area input:hover {
+    background-color: rgb(236, 120, 37);
+    color: black;
+    transition-duration: 0.4s;
+}
+
+/* End Page Thirteen */
+
+/* ------------- */
+
+/* GALLERY PAGE */
+
+/* Gallarey Page Layout */
+.container5 {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner2 banner2 banner2"
+        "sec14 sec14 sec14"
+        "foot foot foot";
+}
+
+/* Gallarey Page Layout */
+
+/* Start Section Fourteen */
+.sec14 {
+    grid-area: sec14;
+    text-align: center;
+}
+
+.sec14 h1 {
+    font-family: "Halant", serif;
+    font-size: 35px;
+}
+
+.sec14 p {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    ;
+    font-size: 18px;
+    color: rgb(119, 118, 118);
+}
+
+.sea {
+    margin: 50px 0px;
+}
+
+/* End Section Fourteen */
+
+/* ------------------------- */
+
+/* LOGIN PAGE */
+
+/* Login Page Layout */
+
+.container6 {
+    height: fit-content;
+    display: grid;
+    grid-template-areas:
+        "header header header"
+        "banner2 banner2 banner2"
+        "sec15 sec15 sec15"
+        "foot foot foot";
+}
+
+/* End Section Fifteen */
+
+.sec15 {
+    height: fit-content;
+    grid-area: sec15;
+    text-align: center;
+    padding: 70px 0px;
+}
+
+.sec15 h1 {
+    font-family: "Halant", serif;
+    font-size: 30px;
+}
+
+.sec15 p {
+    font-family: "Open Sans", sans-serif;
+    color: grey;
+    text-align: center;
+}
+
+.sec15 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(237, 237, 237);
+    width: fit-content;
+    margin: auto;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 15px rgb(102, 101, 101);
+    margin-top: 50px;
+}
+
+.sec15 input {
+    margin: 10px 0px;
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    padding: 8px;
+    width: 250px;
+    background-color: rgba(240, 248, 255, 0);
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.sec15 input::placeholder {
+    color: rgb(137, 136, 136);
+}
+
+.sec15 input::placeholder:hover {
+    color: rgb(255, 255, 255);
+}
+
+.sec15 input:focus {
+    outline: none;
+    box-shadow: 2px 2px 15px white;
+}
+
+.sec15 form:hover {
+    background-image: linear-gradient(rgb(29, 99, 221), rgb(9, 203, 237));
+    color: white;
+}
+
+.sec15 button {
+    padding: 15px;
+    width: 150px;
+    text-align: center;
+    border-radius: 8px;
+    border: none;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: rgb(0, 0, 0);
+    color: white;
+}
+
+.sec15 button:hover {
+    background-color: white;
+    color: rgb(236, 120, 37);
+    transition-duration: 0.4s;
+}
+
+.checky input {
+    width: 12px;
+}
+
+.sec15 form h1 {
+    font-size: 25px;
+    margin-bottom: 25px;
+    margin-top: 0px;
+}
+
+/* End Section Fifteen */
+
+/* ----------------------- */
+
+/* Media Quaries */
+
+
+/* TABLET SCREEN */
+@media (max-width: 997px) and (min-width: 700px) {
+
+    .banner {
+        height: 100vh;
+
+    }
+
+    .banner2 {
+        height: fit-content;
+    }
+
+    .pg {
+        padding: 20% 0;
+    }
+
+    .items {
+        display: none;
+
+    }
+
+    .menu {
+        display: flex;
+        font-size: 55px;
+    }
+
+    .navdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .navdown-content {
+        left: -470%;
+        top: 100%;
+        width: 600%;
+    }
+
+    .navdown input {
+        font-size: 15px;
+    }
+
+    .great {
+        margin-top: 30%;
+        font-size: 35px;
+    }
+
+
+    .about h2,
+    p,
+    button {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .sec1 {
+        text-align: center;
+    }
+    
+    .shape {
+        margin-top: 30px;
+    }
+    
+    .parent img {
+        margin-top: 70px;
+    }
+    
+    .child {
+        height: 150px;
+        width: 600px;
+        margin-top: 40px;
+      
+    }
+    
+    .card:hover {
+        transform: scale(1);
+        transition-duration: 0.4s;
+        color: rgb(7, 176, 243);
+    }
+    
+    .parent2 {
+        margin-top: 100px;
+    }
+    
+    .sec6 {
+        padding-bottom: 20%;
+    }
+    
+    
+    .create {
+        width: 350px;
+        margin-top: 70px;
+    }
+    
+    .sec8 {
+        text-align: center;
+    }
+    
+    .sec11{
+        padding: 80px 0px;
+    }
+    
+    .super form {
+        margin-top: 50px;
+    }
+    
+}
+/* -------------------------------- */
+
+/* PHONE SECREEN */
+@media (max-width: 700px) {
+    .banner {
+        height: fit-content;
+        padding: 25%;
+    }
+
+    .banner2 {
+        height: fit-content;
+    }
+
+    .pg {
+        padding: 25% 0;
+    }
+
+    .items {
+        display: none;
+
+    }
+
+    .menu {
+        display: flex;
+        font-size: 35px;
+    }
+
+    .navdown {
+        position: relative;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .navdown-content {
+        right: 40%;
+        top: 110%;
+        width: 400px;
+    }
+
+    .great {
+        margin-top: 20%;
+        font-size: 27px;
+        align-items: start;
+    }
+
+    .about img {
+        width: 400px;
+        height: 290px;
+
+    }
+
+    .sec3 {
+        padding-bottom: 60px;
+    }
+
+    .about h2,
+    p,
+    button {
+        text-align: center;
+        margin: 10px 0px;
+    }
+
+    .about p {
+        font-size: 15px;
+    }
+
+    .about button {
+        width: 150px;
+        padding: 15px;
+        border-radius: 5px
+    }
+
+    .sec1 {
+
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+
+    .sec2 {
+        padding: 80px 0px;
+    }
+
+    .shape {
+        margin-top: 30px;
+    }
+
+    .parent img {
+        margin-top: 70px;
+        height: 320px;
+        width: 400px;
+    }
+
+    .child {
+        height: 250px;
+        width: 350px;
+        flex-direction: column;
+        margin-top: 40px;
+        font-size: 18px;
+    }
+
+    .exp2 {
+        font-size: 18px;
+    }
+
+    .sec4 {
+        padding: 20px 0px;
+    }
+
+    .card:hover {
+        transform: scale(1);
+        transition-duration: 0.4s;
+        color: rgb(7, 176, 243);
+    }
+
+    .sec5 {
+        padding: 40px 0px;
+    }
+
+    .parent2 {
+        width: 450px;
+        grid-template-columns: 1fr 1fr;
+        margin-top: 60px;
+    }
+
+    .sec6 {
+        padding-bottom: 80%;
+    }
+
+    .create {
+        width: 350px;
+    }
+
+    .sec8 {
+        text-align: center;
+        padding-bottom: 40px;
+    }
+
+    .social {
+        flex-direction: column;
+    }
+
+
+    .ico {
+        margin-top: 40px;
+    }
+
+    .sec10 video {
+        width: 450px;
+        height: 400px;
+    }
+
+    .sec11{
+        padding: 80px 0px;
+    }
+
+    
+    .sec13 p {
+        font-size: 18px;
+    }
+
+    .super form {
+        margin-top: 50px;
+    }
+
+    .area {
+        margin-top: 60px;
+    }
+
+    .info input{
+        margin: 0px;
+    }
+
+}
+/* -------------------------- */
+
+/* End Media Quaries */
+
+/* ;) وكدا الكود كله خلص اخيرااااا ولو وصلت هنا خد بوسة وانت ماشي بردو  */
